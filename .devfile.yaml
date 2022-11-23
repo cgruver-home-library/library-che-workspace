@@ -35,14 +35,9 @@ projects:
 components:
 - name: dev-tools
   container: 
-    image: quay.io/devfile/base-developer-image:ubi8-latest
-    memoryLimit: 128Mi
+    image: quay.io/cgruver0/che/devtools:amd64
+    memoryLimit: 6Gi
     args: ['tail', '-f', '/dev/null']
-- name: java-17
-  container:
-    image: registry.access.redhat.com/ubi8/openjdk-17:latest
-    args: ['tail', '-f', '/dev/null']
-    memoryLimit: 512Mi
     mountSources: true
     volumeMounts:
       - name: m2
