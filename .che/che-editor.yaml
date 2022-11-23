@@ -1,3 +1,3 @@
 id: che-incubator/che-code/insiders
-# registryUrl: https://eclipse-che.github.io/che-plugin-registry/main/v3
-registryUrl: http://plugin-registry.eclipse-che.svc.cluster.local:8080/v3
+registryUrl: https://eclipse-che.github.io/che-plugin-registry/main/v3
+# registryUrl: http://plugin-registry.eclipse-che.svc.cluster.local:8080/v3
