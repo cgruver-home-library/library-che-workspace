@@ -4,61 +4,61 @@ attributes:
 metadata:
   name: home-library
 projects:
-  - name: catalog
-    git:
-      checkoutFrom:
-        remote: origin
-        revision: main
-      remotes:
-        origin: https://github.com/cgruver-home-library/catalog.git
-  - name: librarian
-    git:
-      checkoutFrom:
-        remote: origin
-        revision: main
-      remotes:
-        origin: https://github.com/cgruver-home-library/librarian.git
-  - name: bookshelf
-    git:
-      checkoutFrom:
-        remote: origin
-        revision: main
-      remotes:
-        origin: https://github.com/cgruver-home-library/bookshelf.git
-  - name: pipelines
-    git:
-      checkoutFrom:
-        remote: origin
-        revision: main
-      remotes:
-        origin: https://github.com/cgruver-home-library/tekton-pipelines.git
+- name: catalog
+  git:
+    checkoutFrom:
+      remote: origin
+      revision: main
+    remotes:
+      origin: https://github.com/cgruver-home-library/catalog.git
+- name: librarian
+  git:
+    checkoutFrom:
+      remote: origin
+      revision: main
+    remotes:
+      origin: https://github.com/cgruver-home-library/librarian.git
+- name: bookshelf
+  git:
+    checkoutFrom:
+      remote: origin
+      revision: main
+    remotes:
+      origin: https://github.com/cgruver-home-library/bookshelf.git
+- name: pipelines
+  git:
+    checkoutFrom:
+      remote: origin
+      revision: main
+    remotes:
+      origin: https://github.com/cgruver-home-library/tekton-pipelines.git
 components:
-  - name: dev-tools
-    container: 
-      image: quay.io/devfile/base-developer-image:ubi8-latest
-      memoryLimit: 128Mi
-      args: ['tail', '-f', '/dev/null']
-  - name: java-17
-    container:
-      image: registry.access.redhat.com/ubi8/openjdk-17:latest
-      args: ['tail', '-f', '/dev/null']
-      memoryLimit: 512Mi
-      mountSources: true
-      volumeMounts:
-        - name: m2
-          path: /home/user/.m2
-      endpoints:
-        - name: http-quarkus
-          targetPort: 8080
-        - exposure: none
-          name: debug
-          targetPort: 5858
-      env:
-        - name: DEBUG_PORT
-          value: '5858'
-  - name: m2
-    volume:
-      size: 3Gi
-  - name: projects
-    volume:
-      size: 4Gi
+- name: dev-tools
+  container: 
+    image: quay.io/devfile/base-developer-image:ubi8-latest
+    memoryLimit: 128Mi
+    args: ['tail', '-f', '/dev/null']
+- name: java-17
+  container:
+    image: registry.access.redhat.com/ubi8/openjdk-17:latest
+    args: ['tail', '-f', '/dev/null']
+    memoryLimit: 512Mi
+    mountSources: true
+    volumeMounts:
+      - name: m2
+        path: /home/user/.m2
+    endpoints:
+      - name: http-quarkus
+        targetPort: 8080
+      - exposure: none
+        name: debug
+        targetPort: 5858
+    env:
+      - name: DEBUG_PORT
+        value: '5858'
+- name: m2
+  volume:
+    size: 3Gi
+- name: projects
+  volume:
+    size: 4Gi
