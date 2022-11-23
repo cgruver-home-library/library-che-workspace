@@ -4,25 +4,29 @@ attributes:
 metadata:
   name: home-library
 projects:
-  - git:
+  - name: catalog
+    git:
       checkoutFrom:
         remote: origin
         revision: main
       remotes:
         origin: https://github.com/cgruver-home-library/catalog.git
-  - git:
+  - name: librarian
+    git:
       checkoutFrom:
         remote: origin
         revision: main
       remotes:
         origin: https://github.com/cgruver-home-library/librarian.git
-  - git:
+  - name: bookshelf
+    git:
       checkoutFrom:
         remote: origin
         revision: main
       remotes:
         origin: https://github.com/cgruver-home-library/bookshelf.git
-  - git:
+  - name: pipelines
+    git:
       checkoutFrom:
         remote: origin
         revision: main
