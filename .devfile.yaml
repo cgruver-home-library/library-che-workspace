@@ -37,7 +37,6 @@ components:
   container: 
     image: quay.io/cgruver0/che/devtools:amd64
     memoryLimit: 6Gi
-    args: ['tail', '-f', '/dev/null']
     mountSources: true
     volumeMounts:
       - name: m2
