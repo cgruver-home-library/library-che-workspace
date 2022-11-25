@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../catalog"
+		},
+		{
+			"path": "../bookshelf"
+		},
+		{
+			"path": "../librarian"
+		},
+		{
+			"path": "../pipelines"
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"redhat.java",
+			"redhat.vscode-openshift-connector",
+			"redhat.vscode-quarkus",
+			"redhat.vscode-tekton-pipelines",
+			"redhat.vscode-microprofile",
+			"redhat.vscode-yaml",
+			"vscjava.vscode-maven",
+			"vscjava.vscode-lombok",
+			"DavidAnson.vscode-markdownlint",
+			"mhutchie.git-graph",
+			"eamodio.gitlens",
+			"streetsidesoftware.code-spell-checker",
+			"sdras.night-owl"
+		]
+	},
+	"settings": {}
+}

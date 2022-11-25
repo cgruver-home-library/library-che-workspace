@@ -32,6 +32,13 @@ projects:
       revision: main
     remotes:
       origin: https://github.com/cgruver-home-library/tekton-pipelines.git
+- name: workspace-config
+  git:
+    checkoutFrom:
+      remote: origin
+      revision: main
+    remotes:
+      origin: https://github.com/cgruver-home-library/library-che-workspace.git
 components:
 - name: dev-tools
   container: 
@@ -50,6 +57,8 @@ components:
     env:
       - name: DEBUG_PORT
         value: '5858'
+      - name: JAVA_HOME 
+        value: /etc/alternatives/jre_17
 - name: m2
   volume:
     size: 3Gi
