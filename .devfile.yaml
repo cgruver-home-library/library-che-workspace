@@ -4,6 +4,13 @@ attributes:
 metadata:
   name: home-library
 projects:
+- name: workspace-config
+  git:
+    checkoutFrom:
+      remote: origin
+      revision: main
+    remotes:
+      origin: https://github.com/cgruver-home-library/library-che-workspace.git
 - name: catalog
   git:
     checkoutFrom:
@@ -32,13 +39,6 @@ projects:
       revision: main
     remotes:
       origin: https://github.com/cgruver-home-library/tekton-pipelines.git
-- name: workspace-config
-  git:
-    checkoutFrom:
-      remote: origin
-      revision: main
-    remotes:
-      origin: https://github.com/cgruver-home-library/library-che-workspace.git
 components:
 - name: dev-tools
   container: 
