@@ -9,7 +9,7 @@ ARG GRAALVM_DIR=/opt/mandral
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 COPY --chown=0:0 entrypoint.sh /
 
-RUN microdnf install -y glibc-devel zlib-devel gcc libffi-devel libstdc++-devel gcc-c++ glibc-langpack-en openssl openssl-libs ca-certificates git tar which ${JAVA_PACKAGE} shadow-utils bash jq; \
+RUN microdnf install -y glibc-devel zlib-devel gcc libffi-devel libstdc++-devel gcc-c++ glibc-langpack-en openssl compat-openssl11 ca-certificates git tar which ${JAVA_PACKAGE} shadow-utils bash jq; \
     microdnf update -y ; \
     microdnf clean all ; \
     mkdir -p ${USER_HOME_DIR} ; \
