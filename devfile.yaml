@@ -42,7 +42,7 @@ projects:
 components:
 - name: dev-tools
   container: 
-    image: quay.io/cgruver0/che/devtools:podman
+    image: quay.io/cgruver0/che/quarkus-angular-node20-java21:latest
     memoryLimit: 6Gi
     mountSources: true
     volumeMounts:
@@ -57,8 +57,6 @@ components:
     env:
       - name: DEBUG_PORT
         value: '5858'
-      - name: JAVA_HOME 
-        value: /etc/alternatives/jre_17
 - name: m2
   volume:
     size: 3Gi
