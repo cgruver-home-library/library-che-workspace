@@ -57,6 +57,8 @@ components:
     env:
       - name: DEBUG_PORT
         value: '5858'
+      - name: VSCODE_DEFAULT_WORKSPACE
+        value: "/projects/workspace-config/home-library.code-workspace"
 - name: m2
   volume:
     size: 3Gi
